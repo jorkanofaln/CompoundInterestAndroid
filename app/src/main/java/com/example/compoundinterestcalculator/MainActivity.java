@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText editTextTime;
     private EditText editTextValue;
     private TextView editTextResult;
-    Calculator calculator;
+    private Calculator calculator;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,13 +28,14 @@ public class MainActivity extends AppCompatActivity {
         editTextValue = (EditText) findViewById(R.id.editTextValue);
         editTextResult = (TextView) findViewById(R.id.resultView);
         editTextResult.setText("");
+        calculator = new Calculator(0.0,0.0,0.0);
         futureValueBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 calculator.setInterest(Double.valueOf(editTextInterest.getText().toString()));
                 calculator.setTime(Double.valueOf(editTextTime.getText().toString()));
                 calculator.setValue(Double.valueOf(editTextValue.getText().toString()));
-                editTextInterest.setText(Double.toString(calculator.calculateFutureValue()));
+                editTextResult.setText(Double.toString(calculator.calculateFutureValue()));
             }
         });
         futureValueBtn.setOnClickListener(new View.OnClickListener() {
@@ -45,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 calculator.setInterest(interestRate);
                 calculator.setTime(Double.valueOf(editTextTime.getText().toString()));
                 calculator.setValue(Double.valueOf(editTextValue.getText().toString()));
-                editTextInterest.setText(Double.toString(calculator.calculateFutureValue()));
+                editTextResult.setText(Double.toString(calculator.calculateFutureValue()));
             }
         });
         presentValueBtn.setOnClickListener(new View.OnClickListener() {
