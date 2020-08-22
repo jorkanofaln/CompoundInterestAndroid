@@ -54,8 +54,7 @@
         android:id="@+id/futureValueBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="606dp"
+        android:layout_marginTop="604dp"
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="50dp"
         android:text="future value"
@@ -63,7 +62,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/presentValueBtn"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.6" />
+        app:layout_constraintVertical_bias="0.629" />
 
     <Button
         android:id="@+id/presentValueBtn"
@@ -79,7 +78,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.62" />
 
     <EditText
         android:id="@+id/editTextInterest"
